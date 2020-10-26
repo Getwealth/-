@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/demo1.js"></script>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    ul{
+        width: 600px;
+        height: 100px;
+        background-color: aqua;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    .button{
+        width: 100px;
+        height: 100px;
+        float: left;
+        background-color: blue;
+    }
+    .active{
+        background-color: brown;
+    }
+</style>
+<body>
+    <!-- jquery点击切换 -->
+    <ul>
+        <li class="button"></li>
+        <li class="button"></li>
+        <li class="button"></li>
+    </ul>
+</body>
+</html>
+<script>
+    $(".button").click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    });
+</script>
