@@ -6,6 +6,7 @@
     <title>Document</title>
     <script src="../js/demo1.js"></script>
     <script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/demo2.js"></script>
 </head>
 <style>
     *{
@@ -49,4 +50,19 @@
     $(".button").click(function(){
         $(this).addClass('active').siblings().removeClass('active');
     });
+    var text =(function(i){
+        return function(){
+            console.log(i);
+            alert(i*=2)
+        }
+    })(2);
+   text(5)
+   var a=0,b=0;
+    function A(a){
+        A = function(b){
+            alert(a+b++);
+        }
+        alert(a++);
+   }
+   A(1);A(2)
 </script>
